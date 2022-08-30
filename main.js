@@ -1,4 +1,8 @@
-const input = document.querySelectorAll('input')
+
+
+
+
+// const input = document.querySelectorAll('input')
 
 // input.forEach(field => field.addEventListener('input', () => {
 //     field.setCustomValidity('')
@@ -22,16 +26,16 @@ const input = document.querySelectorAll('input')
 //     }
 // }))
 
-const phone = document.getElementById('phone')
+// const phone = document.getElementById('phone')
 
-phone.addEventListener('input', () => {
-    phone.setCustomValidity('')
-    phone.checkValidity()
-})
-phone.addEventListener('invalid', () => {
-    if (phone.value === ''){
-        phone.setCustomValidity('This field is optional')
-    }else {
-        phone.setCustomValidity('I am expecting a phone number')
-    }
-})
+// phone.addEventListener('input', () => {
+//     phone.setCustomValidity('')
+//     phone.checkValidity()
+// })
+// phone.addEventListener('invalid', () => {
+//     if (phone.value === ''){
+//         phone.setCustomValidity('This field is optional')
+//     }else {
+//         phone.setCustomValidity('I am expecting a phone number')
+//     }
+// })

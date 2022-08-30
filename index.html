@@ -6,16 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Validation</title>
     <script defer src="./main.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form>
-        <label for="name">Name
-            <input type="text" id="name" name="name" required pattern="[A-Za-z]+"></label>
-        <label for="phone">Phone
-            <input type="tel" id="phone" name="phone" pattern="[0-9]+"></label>
-        <label for="mail">Email
-            <input type="email" name="mail" id="mail" required></label>
-            <button>OK</button>
-    </form>
+    <div class="container">
+        <form action="/" method="GET">
+            <div>
+                <label for="name">Username
+                    <input type="text" id="name" name="name" required pattern="[A-Za-z]+">
+                        <i class="check">&check;</i>
+                        <i class="exclamation">&#10071;</i>
+                        <small class="errMess">Error message</small>
+                </label>
+            </div>
+            <div>
+                <label for="mail">Email
+                    <input type="email" name="mail" id="mail" required>
+                        <i class="check">&check;</i>
+                        <i class="exclamation">&#10071;</i>
+                        <small class="errMess">Error message</small>
+                </label>
+            </div>
+            <div>
+                <label for="pwd">Password
+                    <input type="password" id="pwd" name="pwd" required>
+                    <i class="check">&check;</i>
+                    <i class="exclamation">&#10071;</i>
+                    <small class="errMess">Error message</small>
+                </label>
+            </div>
+            <div>
+                <label for="pwdConfirm">Confirm
+                    <input type="text" name="pwdConfirm" id="pwdConfirm" required>
+                    <i class="check">&check;</i>
+                    <i class="exclamation">&#10071;</i>
+                    <small class="errMess">Error message</small>
+                </label>
+            </div>
+                <button class="button">OK</button>
+        </form>
+    </div>
 </body>
 </html>

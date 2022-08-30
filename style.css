@@ -1,0 +1,130 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--main-color);
+}
+
+:root {
+    --main-color: #b6e0f1;
+    --contrast: #ce6d8b;
+    --contrast-2: #CE2D4F;
+    --darker-1: #4056F4;
+    --darker-2: #470FF4;
+    --valid: #57df1c;
+    --invalid: #d81c1c;
+
+}
+
+.container {
+    display: flex;
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 10px;
+    justify-content: center;
+    max-width: 25vw;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+form {
+    margin: 20px;
+}
+
+div {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 25px;
+}
+
+form div {
+    position: relative;
+}
+
+.button {
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    background-color: var(--contrast);
+    border: none;
+    color: white;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: var(--contrast-2);
+}
+
+.button:active {
+    cursor: pointer;
+    background-color: var(--darker-2);
+}
+
+div label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+label, input, .button {
+    font-size: 1.1rem;
+}
+
+.button, input {
+border-radius: 3px;
+}
+
+input {
+    border: 1px solid black;
+    display: block;
+}
+
+/* input:valid {
+    border: 2px solid var(--valid);
+}
+
+input:invalid {
+    border: 2px solid var(--invalid);
+} */
+
+.check, .exclamation {
+    visibility: hidden;
+    position: absolute;
+    top: 25px;
+    right: 15px;
+}
+
+.errMess {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    background-color: var(--invalid);
+    width: 100%;
+    padding: 2px;
+}
+
+.success input{
+    border-color: var(--valid);
+}
+
+.success .check {
+    visibility: visible;
+}
+
+.error input{
+    border-color: var(--invalid);
+}
+
+.error .exclamation {
+    visibility: visible;
+}
+
+.error .errMess {
+    visibility: visible;
+}
