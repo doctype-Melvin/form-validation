@@ -51,6 +51,15 @@ body {
     border-radius: 3px;
     border: solid 1px #000;
     width: 100%;
+    margin-bottom: 15px;
+}
+
+.formControl input:invalid{
+    border: 1px solid var(--invalid);
+}
+
+.formControl input:valid {
+    border: 1px solid var(--valid);
 }
 
 .check {
@@ -73,15 +82,15 @@ body {
     position: absolute;
     bottom: -18px;
     left: 5px;
-    visibility: hidden;
 }
 
 .errMessage {
+    visibility: hidden;
     color: var(--invalid);
     display: block;
 }
 
-form button {
+.btn {
     background-color: var(--contrast);
     color: #fff;
     display: block;
@@ -90,3 +99,4 @@ form button {
     border: solid var(--darker-2) 1px;
     font-size: 1.1rem;
 }
+
