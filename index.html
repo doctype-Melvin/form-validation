@@ -9,42 +9,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <form action="/" method="GET">
-            <div>
-                <label for="name">Username
-                    <input type="text" id="name" name="name" required pattern="[A-Za-z]+">
-                        <i class="check">&check;</i>
-                        <i class="exclamation">&#10071;</i>
-                        <small class="errMess">Error message</small>
-                </label>
-            </div>
-            <div>
-                <label for="mail">Email
-                    <input type="email" name="mail" id="mail" required>
-                        <i class="check">&check;</i>
-                        <i class="exclamation">&#10071;</i>
-                        <small class="errMess">Error message</small>
-                </label>
-            </div>
-            <div>
-                <label for="pwd">Password
-                    <input type="password" id="pwd" name="pwd" required>
-                    <i class="check">&check;</i>
-                    <i class="exclamation">&#10071;</i>
-                    <small class="errMess">Error message</small>
-                </label>
-            </div>
-            <div>
-                <label for="pwdConfirm">Confirm
-                    <input type="text" name="pwdConfirm" id="pwdConfirm" required>
-                    <i class="check">&check;</i>
-                    <i class="exclamation">&#10071;</i>
-                    <small class="errMess">Error message</small>
-                </label>
-            </div>
-                <button class="button">OK</button>
-        </form>
-    </div>
+   <div class="container">
+    <form action="/" method="get">
+        <header>
+            <h2 class="title">Sign Up</h2>
+        </header>
+        <div class="formControl">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" required pattern="^\S+$" minlength="5">
+            <i class="check">&check;</i>
+            <i class="error">&#x21;</i>
+            <small class="errMessage">Error message</small>
+        </div>
+        <button type="submit">OK</button>
+    </form>
+   </div>
 </body>
 </html>

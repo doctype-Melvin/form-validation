@@ -10,6 +10,13 @@ html, body {
     background-color: var(--main-color);
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
 :root {
     --main-color: #b6e0f1;
     --contrast: #ce6d8b;
@@ -22,109 +29,64 @@ html, body {
 }
 
 .container {
-    display: flex;
-    margin-top: 30px;
     background-color: #fff;
-    padding: 10px;
-    justify-content: center;
-    max-width: 25vw;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 10px 25px;
     border-radius: 5px;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
 }
 
-form {
-    margin: 20px;
-}
-
-div {
-    display: flex;
-    justify-content: flex-end;
+.formControl {
+    position: relative;
     margin-bottom: 25px;
 }
 
-form div {
-    position: relative;
-}
-
-.button {
-    margin: 0 auto;
-    display: block;
-    width: 100%;
-    background-color: var(--contrast);
-    border: none;
-    color: white;
-}
-
-.button:hover {
-    cursor: pointer;
-    background-color: var(--contrast-2);
-}
-
-.button:active {
-    cursor: pointer;
-    background-color: var(--darker-2);
-}
-
-div label {
+.formControl label {
     display: inline-block;
     margin-bottom: 5px;
 }
 
-label, input, .button {
-    font-size: 1.1rem;
+.formControl input {
+    display: block;
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 3px;
+    border: solid 1px #000;
+    width: 100%;
 }
 
-.button, input {
-border-radius: 3px;
+.check {
+    color: var(--valid);
 }
 
-input {
-    border: 1px solid black;
+.error {
+    color: var(--invalid);
+}
+
+.formControl i {
+    position: absolute;
+    top: 30px;
+    right: 5px;
+    font-size: 1.25rem;
+    visibility: hidden;
+}
+
+.formControl small {
+    position: absolute;
+    bottom: -18px;
+    left: 5px;
+    visibility: hidden;
+}
+
+.errMessage {
+    color: var(--invalid);
     display: block;
 }
 
-/* input:valid {
-    border: 2px solid var(--valid);
-}
-
-input:invalid {
-    border: 2px solid var(--invalid);
-} */
-
-.check, .exclamation {
-    visibility: hidden;
-    position: absolute;
-    top: 25px;
-    right: 15px;
-}
-
-.errMess {
-    visibility: hidden;
-    position: absolute;
-    left: 0;
-    background-color: var(--invalid);
+form button {
+    background-color: var(--contrast);
+    color: #fff;
+    display: block;
+    border-radius: 3px;
     width: 100%;
-    padding: 2px;
-}
-
-.success input{
-    border-color: var(--valid);
-}
-
-.success .check {
-    visibility: visible;
-}
-
-.error input{
-    border-color: var(--invalid);
-}
-
-.error .exclamation {
-    visibility: visible;
-}
-
-.error .errMess {
-    visibility: visible;
+    border: solid var(--darker-2) 1px;
+    font-size: 1.1rem;
 }
