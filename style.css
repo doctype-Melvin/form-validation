@@ -51,7 +51,7 @@ body {
     border-radius: 3px;
     border: solid 1px #000;
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 27px;
 }
 
 input{
@@ -59,7 +59,7 @@ input{
     outline: none;
 }
 
-.formControl input:invalid:focus{
+.formControl input:not(:focus):invalid{
     border-color: var(--invalid);
 }
 
@@ -93,7 +93,7 @@ input{
 
 .formControl small {
     position: absolute;
-    bottom: -18px;
+    bottom: -20px;
     left: 5px;
 }
 
