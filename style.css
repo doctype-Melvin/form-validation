@@ -70,6 +70,14 @@ body {
     color: var(--invalid);
 }
 
+.input.success ~ .check, 
+.input.fail ~ .error,
+.input.fail ~ .errMessage
+{
+    visibility: visible;
+}
+
+
 .formControl i {
     position: absolute;
     top: 30px;
@@ -96,7 +104,13 @@ body {
     display: block;
     border-radius: 3px;
     width: 100%;
-    border: solid var(--darker-2) 1px;
+    border: solid var(--main-color) 1px;
     font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: var(--contrast-2);
 }
 
