@@ -54,12 +54,17 @@ body {
     margin-bottom: 15px;
 }
 
-.formControl input:invalid{
-    border: 1px solid var(--invalid);
+input{
+    border: solid 1px #000;
+    outline: none;
 }
 
-.formControl input:valid {
-    border: 1px solid var(--valid);
+.formControl input:invalid:focus{
+    border-color: var(--invalid);
+}
+
+.formControl input:not(:focus):valid {
+    border-color: var(--valid);
 }
 
 .check {
